@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "SGHServer.Domain/1.0.0": {
+        "runtime": {
+          "SGHServer.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SGHServer.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

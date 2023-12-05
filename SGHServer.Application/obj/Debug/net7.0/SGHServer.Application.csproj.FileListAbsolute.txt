@@ -1,0 +1,15 @@
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\bin\Debug\net7.0\SGHServer.Application.deps.json
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\bin\Debug\net7.0\SGHServer.Application.dll
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\bin\Debug\net7.0\SGHServer.Application.pdb
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\bin\Debug\net7.0\SGHServer.Domain.dll
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\bin\Debug\net7.0\SGHServer.Domain.pdb
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\obj\Debug\net7.0\SGHServer.Application.csproj.AssemblyReference.cache
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\obj\Debug\net7.0\SGHServer.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\obj\Debug\net7.0\SGHServer.Application.AssemblyInfoInputs.cache
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\obj\Debug\net7.0\SGHServer.Application.AssemblyInfo.cs
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\obj\Debug\net7.0\SGHServer.Application.csproj.CoreCompileInputs.cache
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\obj\Debug\net7.0\SGHServer.Application.csproj.CopyComplete
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\obj\Debug\net7.0\SGHServer.Application.dll
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\obj\Debug\net7.0\refint\SGHServer.Application.dll
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\obj\Debug\net7.0\SGHServer.Application.pdb
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Application\obj\Debug\net7.0\ref\SGHServer.Application.dll

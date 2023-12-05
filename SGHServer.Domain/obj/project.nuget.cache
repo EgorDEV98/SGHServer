@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ak2VQQxaD6C+QFCyvwBKK/wFKbrhk0EPHLl+OuWAwqslusKpolj5Nh6lQ3/Q+O44Oo+i28Gj60U1u9WYHinhew==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\egors\\RiderProjects\\SGHServer\\SGHServer.Domain\\SGHServer.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\egors\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\egors\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\egors\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}

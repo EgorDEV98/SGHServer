@@ -1,0 +1,11 @@
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Domain\bin\Debug\net7.0\SGHServer.Domain.deps.json
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Domain\bin\Debug\net7.0\SGHServer.Domain.dll
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Domain\bin\Debug\net7.0\SGHServer.Domain.pdb
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Domain\obj\Debug\net7.0\SGHServer.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Domain\obj\Debug\net7.0\SGHServer.Domain.AssemblyInfoInputs.cache
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Domain\obj\Debug\net7.0\SGHServer.Domain.AssemblyInfo.cs
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Domain\obj\Debug\net7.0\SGHServer.Domain.csproj.CoreCompileInputs.cache
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Domain\obj\Debug\net7.0\SGHServer.Domain.dll
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Domain\obj\Debug\net7.0\refint\SGHServer.Domain.dll
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Domain\obj\Debug\net7.0\SGHServer.Domain.pdb
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Domain\obj\Debug\net7.0\ref\SGHServer.Domain.dll

@@ -1,0 +1,17 @@
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\bin\Debug\net7.0\SGHServer.Persistence.deps.json
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\bin\Debug\net7.0\SGHServer.Persistence.dll
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\bin\Debug\net7.0\SGHServer.Persistence.pdb
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\bin\Debug\net7.0\SGHServer.Application.dll
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\bin\Debug\net7.0\SGHServer.Domain.dll
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\bin\Debug\net7.0\SGHServer.Application.pdb
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\bin\Debug\net7.0\SGHServer.Domain.pdb
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\obj\Debug\net7.0\SGHServer.Persistence.csproj.AssemblyReference.cache
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\obj\Debug\net7.0\SGHServer.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\obj\Debug\net7.0\SGHServer.Persistence.AssemblyInfoInputs.cache
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\obj\Debug\net7.0\SGHServer.Persistence.AssemblyInfo.cs
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\obj\Debug\net7.0\SGHServer.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\obj\Debug\net7.0\SGHServer.Persistence.csproj.CopyComplete
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\obj\Debug\net7.0\SGHServer.Persistence.dll
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\obj\Debug\net7.0\refint\SGHServer.Persistence.dll
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\obj\Debug\net7.0\SGHServer.Persistence.pdb
+C:\Users\egors\RiderProjects\SGHServer\SGHServer.Persistence\obj\Debug\net7.0\ref\SGHServer.Persistence.dll
