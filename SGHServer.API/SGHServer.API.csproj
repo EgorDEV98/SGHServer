@@ -19,6 +19,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\SGHServer.Identy\SGHServer.Identy.csproj" />
       <ProjectReference Include="..\SGHServer.Persistence\SGHServer.Persistence.csproj" />
     </ItemGroup>
 
