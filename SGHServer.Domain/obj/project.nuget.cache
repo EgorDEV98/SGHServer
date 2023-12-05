@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ak2VQQxaD6C+QFCyvwBKK/wFKbrhk0EPHLl+OuWAwqslusKpolj5Nh6lQ3/Q+O44Oo+i28Gj60U1u9WYHinhew==",
+  "dgSpecHash": "zKJsRbaHFQVbFtC1Yy/8BAB+9Z797pADGjxK1oDwVxkyAGmDxvI7evEGHVDONA8aJBgg3W8vCxzszk/lTRXFVw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\egors\\RiderProjects\\SGHServer\\SGHServer.Domain\\SGHServer.Domain.csproj",
+  "projectFilePath": "D:\\SGHServer\\SGHServer.Domain\\SGHServer.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\egors\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
     "C:\\Users\\egors\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",

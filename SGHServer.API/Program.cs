@@ -1,12 +1,24 @@
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Mvc;
+using SGHServer.API.Middleware;
+using SGHServer.Application;
+using SGHServer.Identy;
 using SGHServer.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+builder.Services.AddApplication();
+builder.Services.AddProtection();
 builder.Services.AddPersistence(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.Configure<ApiBehaviorOptions>(x =>
+{
+    x.SuppressModelStateInvalidFilter = true;
+});
+
+builder.Services.AddRouting(x => x.LowercaseUrls = true);
 
 var app = builder.Build();
 
@@ -37,6 +49,7 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
 app.UseSwagger();
 app.UseSwaggerUI();
 
+app.UseGlobalExtentionMiddleware();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
