@@ -8,6 +8,7 @@ COPY ["SGHServer.API/SGHServer.API.csproj", "SGHServer.API/"]
 COPY ["SGHServer.Domain/SGHServer.Domain.csproj", "SGHServer.Domain/"]
 COPY ["SGHServer.Persistence/SGHServer.Persistence.csproj", "SGHServer.Persistence/"]
 COPY ["SGHServer.Application/SGHServer.Application.csproj", "SGHServer.Application/"]
+COPY ["SGHServer.Identy/SGHServer.Identy.csproj", "SGHServer.Identy/"]
 RUN dotnet restore "SGHServer.API/SGHServer.API.csproj"
 COPY . .
 WORKDIR "/src/SGHServer.API"
