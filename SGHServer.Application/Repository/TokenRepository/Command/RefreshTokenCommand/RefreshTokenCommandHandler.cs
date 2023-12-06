@@ -6,7 +6,7 @@ using SGHServer.Application.Response;
 
 namespace SGHServer.Application.Repository.TokenRepository.Command.RefreshTokenCommand;
 
-public class RefreshTokenCommandHandler : IRequestHandler<RefreshTokenCommand, TokenResponseModel?>
+public class RefreshTokenCommandHandler : IRequestHandler<RefreshTokenCommand, AuthResponse?>
 {
     private readonly IDataStore _dataStore;
     private readonly IIdentityService _identityService;
@@ -22,7 +22,7 @@ public class RefreshTokenCommandHandler : IRequestHandler<RefreshTokenCommand, T
         _logger = logger;
     }
     
-    public async Task<TokenResponseModel?> Handle(RefreshTokenCommand request, CancellationToken cancellationToken)
+    public async Task<AuthResponse?> Handle(RefreshTokenCommand request, CancellationToken cancellationToken)
     {
         try
         {
@@ -45,7 +45,7 @@ public class RefreshTokenCommandHandler : IRequestHandler<RefreshTokenCommand, T
             user.RefreshToken = newRefreshToken;
             await _dataStore.SaveChangesAsync(cancellationToken);
 
-            return new TokenResponseModel()
+            return new AuthResponse()
             {
                 AccessToken = newAccessToken,
                 RefreshToken = newRefreshToken
