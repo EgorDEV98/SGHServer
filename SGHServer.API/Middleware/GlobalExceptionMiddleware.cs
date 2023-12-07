@@ -33,18 +33,19 @@ public class GlobalExceptionMiddleware
     private async Task ExceptionHandleAsync(HttpContext httpContext, Exception exception)
     {
         int statusCode = (int)HttpStatusCode.BadRequest;
-        string? errorMessage = "Internal Error";
+        string[] errorMessages = { "Internal Error" };
         switch (exception)
         {
             case ValidationException validationException:
-                var exFirst = validationException.Errors.FirstOrDefault();
-                errorMessage = exFirst.ErrorMessage;
+                errorMessages = validationException.Errors
+                    .Select(x => $"[{x.ErrorCode}] {x.ErrorMessage}")
+                    .ToArray();
                 break;
             
         }
         
         httpContext.Response.ContentType = "application/json";
         httpContext.Response.StatusCode = statusCode;
-        await httpContext.Response.WriteAsJsonAsync(new { error = errorMessage });
+        await httpContext.Response.WriteAsJsonAsync(new { errors = errorMessages });
     }
 }
