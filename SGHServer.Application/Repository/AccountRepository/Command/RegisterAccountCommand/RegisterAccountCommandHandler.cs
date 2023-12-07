@@ -48,6 +48,7 @@ public class RegisterAccountCommandHandler : IRequestHandler<RegisterAccountComm
 
         await _dataStore.Users.AddAsync(user, cancellationToken);
         await _dataStore.SaveChangesAsync(cancellationToken);
+        _logger.LogInformation("Пользователь с Email {Email} успешно создан с ID {ID}", request.Email, user.Id);
 
         return new AuthResponse()
         {

@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using FluentValidation;
+using SGHServer.Application.Exceptions;
 
 namespace SGHServer.API.Middleware;
 
@@ -38,10 +39,13 @@ public class GlobalExceptionMiddleware
         {
             case ValidationException validationException:
                 errorMessages = validationException.Errors
-                    .Select(x => $"[{x.ErrorCode}] {x.ErrorMessage}")
+                    .Select(x => $"{x.ErrorMessage}")
                     .ToArray();
                 break;
-            
+            case BaseException ex:
+                errorMessages = new[] { exception.Message };
+                statusCode = (int)ex.StatusCode;
+                break;
         }
         
         httpContext.Response.ContentType = "application/json";
