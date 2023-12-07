@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SGHServer.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a34f9844f4d6cbe143862fe36c6d100af5ede42")]
 [assembly: System.Reflection.AssemblyProductAttribute("SGHServer.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SGHServer.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

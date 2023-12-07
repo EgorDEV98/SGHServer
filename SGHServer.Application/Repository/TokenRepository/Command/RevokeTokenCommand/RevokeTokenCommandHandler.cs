@@ -1,11 +1,12 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using SGHServer.Application.Exceptions;
 using SGHServer.Application.Interfaces;
 
 namespace SGHServer.Application.Repository.TokenRepository.Command.RevokeTokenCommand;
 
-public class RevokeTokenCommandHandler : IRequestHandler<RevokeTokenCommand, bool>
+public class RevokeTokenCommandHandler : IRequestHandler<RevokeTokenCommand>
 {
     private readonly IDataStore _dataStore;
     private readonly ILogger<RevokeTokenCommandHandler> _logger;
@@ -16,26 +17,17 @@ public class RevokeTokenCommandHandler : IRequestHandler<RevokeTokenCommand, boo
         _logger = logger;
     }
     
-    public async Task<bool> Handle(RevokeTokenCommand request, CancellationToken cancellationToken)
+    public async Task Handle(RevokeTokenCommand request, CancellationToken cancellationToken)
     {
-        try
+        var username = await _dataStore.Users.FirstOrDefaultAsync(x => x.Email == request.Email, cancellationToken: cancellationToken);
+        if (username == null)
         {
-            var username = await _dataStore.Users.FirstOrDefaultAsync(x => x.Email == request.Email, cancellationToken: cancellationToken);
-            if (username == null)
-            {
-                _logger.LogError("Пользователь с именем {Email} не найден", request.Email);
-                return false;
-            }
-
-            username.RefreshToken = null;
-            await _dataStore.SaveChangesAsync(cancellationToken);
-
-            return true;
+            _logger.LogError("Пользователь с именем {Email} не найден", request.Email);
+            throw new UnauthorizedException("Необходимо авторизоваться");
         }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex.Message);
-            return false;
-        }
+
+        username.RefreshToken = null;
+        await _dataStore.SaveChangesAsync(cancellationToken);
+        _logger.LogInformation("Пользователь {Email} успешно вышел", request.Email);
     }
 }
