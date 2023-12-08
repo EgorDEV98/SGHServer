@@ -59,7 +59,7 @@ public class TokenService : IIdentityService
         return principal;
     }
 
-    private TokenValidationParameters GetTokenParameter()
+    public TokenValidationParameters GetTokenParameter()
     {
         return new TokenValidationParameters
         {

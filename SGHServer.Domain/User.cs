@@ -21,4 +21,11 @@ public class User : BaseEntity
     /// Дата окончания токена
     /// </summary>
     public DateTime RefreshTokenExpiryTime { get; set; }
+    
+    /// <summary>
+    /// Устройства пользователя
+    /// </summary>
+    public ICollection<Device> Devices { get; set; }
 }
+
+

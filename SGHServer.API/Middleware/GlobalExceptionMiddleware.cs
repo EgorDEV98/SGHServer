@@ -1,5 +1,6 @@
 ﻿using System.Net;
 using FluentValidation;
+using Microsoft.IdentityModel.Tokens;
 using SGHServer.Application.Exceptions;
 
 namespace SGHServer.API.Middleware;
@@ -45,6 +46,10 @@ public class GlobalExceptionMiddleware
             case BaseException ex:
                 errorMessages = new[] { exception.Message };
                 statusCode = (int)ex.StatusCode;
+                break;
+            case SecurityTokenException:
+                errorMessages = new[] { exception.Message };
+                statusCode = (int)HttpStatusCode.Unauthorized;
                 break;
         }
         
