@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SGHServer.API.RequestModel;
 using SGHServer.Application.Repository.TokenRepository.Command.RefreshTokenCommand;
@@ -26,10 +27,10 @@ public class TokenController : BaseController
         return Ok(authResponse);
     }
 
-    [HttpPost, Authorize]
+    [HttpGet, Authorize]
     public async Task<IActionResult> Revoke()
     {
-        var email = User.Identity.Name;
+        var email = User.Claims.First(x => x.Type == ClaimTypes.Email).Value;
         var command = new RevokeTokenCommand()
         {
             Email = email

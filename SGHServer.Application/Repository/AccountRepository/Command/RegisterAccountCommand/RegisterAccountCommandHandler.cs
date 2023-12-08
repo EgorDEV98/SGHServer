@@ -1,6 +1,8 @@
 ﻿using System.Security.Claims;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using SGHServer.Application.Exceptions;
 using SGHServer.Application.Interfaces;
 using SGHServer.Application.Response;
 using SGHServer.Application.Utils;
@@ -37,6 +39,12 @@ public class RegisterAccountCommandHandler : IRequestHandler<RegisterAccountComm
         var refreshToken = _identityService.GenerateRefreshToken();
         
         var hashedPassword = Hashed.Encrypt(request.Password);
+
+        var userAny = await _dataStore.Users.FirstOrDefaultAsync(x => x.Email == request.Email, cancellationToken);
+        if (userAny != null)
+        {
+            throw new BadRequestException("Пользователь с данным email уже зарегистрирован!");
+        }
 
         var user = new User()
         {
