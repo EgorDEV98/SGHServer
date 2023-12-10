@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using System.Security.Claims;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SGHServer.Application.Interfaces;
@@ -27,9 +28,10 @@ public class RefreshTokenCommandHandler : IRequestHandler<RefreshTokenCommand, A
         try
         {
             var principal = _identityService.GetPrincipalFromExpiredToken(request.AccessToken);
-            var email = principal.Identity.Name;
-
-            var user = await _dataStore.Users.FirstOrDefaultAsync(x => x.Email == email, cancellationToken);
+            var idString = principal.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Sid).Value;
+            Int32.TryParse(idString, out var id);
+            
+            var user = await _dataStore.Users.FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
 
             if (user is null || user.RefreshToken != request.RefreshToken ||
                 user.RefreshTokenExpiryTime <= DateTime.Now)

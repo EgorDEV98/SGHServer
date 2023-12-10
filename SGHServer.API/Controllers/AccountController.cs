@@ -9,10 +9,11 @@ namespace SGHServer.API.Controllers;
 public class AccountController : BaseController
 {
     [HttpPost]
-    public async Task<IActionResult> Registration([FromBody] LoginModel loginModel)
+    public async Task<IActionResult> Registration([FromBody] RegistrationModel loginModel)
     {
         var command = new RegisterAccountCommand()
         {
+            Name = loginModel.Name,
             Email = loginModel.Email,
             Password = loginModel.Password
         };

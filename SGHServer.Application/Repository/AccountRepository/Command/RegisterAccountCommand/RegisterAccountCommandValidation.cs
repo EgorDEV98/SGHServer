@@ -6,6 +6,10 @@ public class RegisterAccountCommandValidation : AbstractValidator<RegisterAccoun
 {
     public RegisterAccountCommandValidation()
     {
+        RuleFor(x => x.Name)
+            .NotNull().WithMessage("Имя профиля обязательно!").WithErrorCode("400")
+            .NotEmpty().WithMessage("Имя профиля обязательно!").WithErrorCode("400");
+        
         RuleFor(x => x.Email)
             .NotNull().WithMessage("Адрес электронной почты обязателен!").WithErrorCode("400")
             .NotEmpty().WithMessage("Адрес электронной почты обязателен!").WithErrorCode("400")

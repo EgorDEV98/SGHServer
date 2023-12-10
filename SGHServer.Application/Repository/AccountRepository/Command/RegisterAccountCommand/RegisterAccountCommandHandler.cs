@@ -29,13 +29,6 @@ public class RegisterAccountCommandHandler : IRequestHandler<RegisterAccountComm
     
     public async Task<AuthResponse> Handle(RegisterAccountCommand request, CancellationToken cancellationToken)
     {
-        var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.Email, request.Email),
-            new Claim(ClaimTypes.Role, "User")
-        };
-        
-        var accessToken = _identityService.GenerateAccessToken(claims);
         var refreshToken = _identityService.GenerateRefreshToken();
         
         var hashedPassword = Hashed.Encrypt(request.Password);
@@ -48,6 +41,7 @@ public class RegisterAccountCommandHandler : IRequestHandler<RegisterAccountComm
 
         var user = new User()
         {
+            Name = request.Name,
             Email = request.Email,
             Password = hashedPassword,
             RefreshToken = refreshToken,
@@ -56,6 +50,17 @@ public class RegisterAccountCommandHandler : IRequestHandler<RegisterAccountComm
 
         await _dataStore.Users.AddAsync(user, cancellationToken);
         await _dataStore.SaveChangesAsync(cancellationToken);
+        
+        var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Email, request.Email),
+            new Claim(ClaimTypes.Role, "User"),
+            new Claim(ClaimTypes.Name, request.Name),
+            new Claim(ClaimTypes.Sid, user.Id.ToString()),
+        };
+        
+        var accessToken = _identityService.GenerateAccessToken(claims);
+        
         _logger.LogInformation("Пользователь с Email {Email} успешно создан с ID {ID}", request.Email, user.Id);
 
         return new AuthResponse()

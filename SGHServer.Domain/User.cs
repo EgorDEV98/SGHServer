@@ -3,6 +3,11 @@
 public class User : BaseEntity
 {
     /// <summary>
+    /// Имя пользователя
+    /// </summary>
+    public string Name { get; set; }
+    
+    /// <summary>
     /// Е майл пользователя
     /// </summary>
     public string Email { get; set; }

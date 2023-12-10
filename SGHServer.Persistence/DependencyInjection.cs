@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SGHServer.Application.Interfaces;
@@ -16,7 +17,7 @@ public static class DependencyInjection
         {
             options.UseNpgsql(dbConnectionString);
         });
-        
+
         service.AddScoped<IDataStore>(provider =>
             provider.GetService<DataStore>());
 
