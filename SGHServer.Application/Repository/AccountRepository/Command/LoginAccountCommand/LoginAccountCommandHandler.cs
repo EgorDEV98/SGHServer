@@ -37,6 +37,8 @@ public class LoginAccountCommandHandler : IRequestHandler<LoginAccountCommand, A
         {
             new Claim(ClaimTypes.Email, request.Email),
             new Claim(ClaimTypes.Role, "User"),
+            new Claim(ClaimTypes.Name, user.Name),
+            new Claim(ClaimTypes.Sid, user.Id.ToString()),
         };
         
         var accessToken = _identityService.GenerateAccessToken(claims);

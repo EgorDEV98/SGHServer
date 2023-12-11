@@ -5,6 +5,7 @@ namespace SGHServer.Application.Repository.AccountRepository.Command.RegisterAcc
 
 public class RegisterAccountCommand : IRequest<AuthResponse>
 {
+    public string Name { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
 }

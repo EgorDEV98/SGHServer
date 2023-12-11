@@ -12,5 +12,8 @@ public class Device : BaseEntity
     /// </summary>
     public Guid DeviceUid { get; set; }
     
-    
+    /// <summary>
+    /// Датчики устройства
+    /// </summary>
+    public ICollection<Sensor> Sensors { get; set; }
 }

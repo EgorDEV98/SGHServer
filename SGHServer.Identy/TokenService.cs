@@ -52,7 +52,11 @@ public class TokenService : IIdentityService
     {
         var tokenHandler = new JwtSecurityTokenHandler();
         SecurityToken securityToken;
-        var principal = tokenHandler.ValidateToken(token, GetTokenParameter(), out securityToken);
+        
+        var parameters = GetTokenParameter();
+        parameters.ValidateLifetime = false;
+
+        var principal = tokenHandler.ValidateToken(token, parameters, out securityToken);
         var jwtSecurityToken = securityToken as JwtSecurityToken;
         if (jwtSecurityToken == null || !jwtSecurityToken.Header.Alg.Equals(SecurityAlgorithms.HmacSha256, StringComparison.InvariantCultureIgnoreCase))
             throw new SecurityTokenException("Invalid token");
