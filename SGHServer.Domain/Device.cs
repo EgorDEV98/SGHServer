@@ -16,4 +16,14 @@ public class Device : BaseEntity
     /// Датчики устройства
     /// </summary>
     public ICollection<Sensor> Sensors { get; set; }
+    
+    /// <summary>
+    /// Ссылка на пользователя
+    /// </summary>
+    public User User { get; set; }
+    
+    /// <summary>
+    /// Id пользователя
+    /// </summary>
+    public int UserId { get; set; }
 }
