@@ -31,3 +31,5 @@ kSGHServer.Application/Repository/AccountRepository/Command/RegisterAccountComma
 .SGHServer.Application/Response/AuthResponse.cs,6\d\6dd1a39923468e4af99116aacbc16730f77d9595
 ¥
 uSGHServer.Application/Repository/AccountRepository/Command/RegisterAccountCommand/RegisterAccountCommandValidation.cs,0\e\0ec9b788cf11982035850b16ff7ea13285079c7d
+H
+SGHServer.API/.gitignore,8\4\84090b5913f607a154fcaff6d35e99096b781865
