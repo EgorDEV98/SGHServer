@@ -31,16 +31,16 @@ public class DeviceController : BaseController
     }
 
     [HttpPatch, Authorize]
-    public async Task<IActionResult> Rename([FromBody] RenameDeviceModel renameDeviceModel)
+    public async Task<DeviceVM> Rename([FromBody] RenameDeviceModel renameDeviceModel)
     {
         var command = new RenameDeviceCommand()
         {
             DeviceUid = renameDeviceModel.DeviceUid,
             NewName = renameDeviceModel.NewName
         };
-        await Mediator.Send(command);
+        var newDevice = await Mediator.Send(command);
 
-        return Ok();
+        return newDevice;
     }
 
     [HttpDelete, Authorize]
