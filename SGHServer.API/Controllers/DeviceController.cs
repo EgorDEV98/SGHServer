@@ -5,6 +5,7 @@ using SGHServer.API.RequestModel;
 using SGHServer.Application.Repository.DeviceRepository.Command.AddDeviceCommand;
 using SGHServer.Application.Repository.DeviceRepository.Command.RemoveDeviceCommand;
 using SGHServer.Application.Repository.DeviceRepository.Command.RenameDeviceCommand;
+using SGHServer.Application.Repository.DeviceRepository.Query.GetDeviceQuery;
 using SGHServer.Application.Repository.DeviceRepository.Query.GetDevicesQuery;
 using SGHServer.Application.Response.VMs;
 
@@ -55,7 +56,7 @@ public class DeviceController : BaseController
     }
 
     [HttpGet, Authorize]
-    public async Task<DeviceVmList> GetAsync()
+    public async Task<DeviceVmList> GetListAsync()
     {
         var usersid = User.Claims.First(x => x.Type == ClaimTypes.Sid).Value;
         int.TryParse(usersid, out var userId);
@@ -63,6 +64,18 @@ public class DeviceController : BaseController
         var command = new GetDevicesQueryCommand()
         {
             UserId = userId
+        };
+        var result = await Mediator.Send(command);
+
+        return result;
+    }
+    
+    [HttpPost, Authorize]
+    public async Task<DeviceVM> GetAsync([FromBody] GetDeviceModel deviceModel)
+    {
+        var command = new GetDeviceQueryCommand()
+        {
+            DeviceUid = deviceModel.DeviceUid
         };
         var result = await Mediator.Send(command);
 
