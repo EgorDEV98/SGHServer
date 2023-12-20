@@ -2,11 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using SGHServer.Application.Exceptions;
 using SGHServer.Application.Interfaces;
+using SGHServer.Application.Mapping;
+using SGHServer.Application.Response.VMs;
 using SGHServer.Domain;
 
 namespace SGHServer.Application.Repository.DeviceRepository.Command.AddDeviceCommand;
 
-public class AddDeviceCommandHandler : IRequestHandler<AddDeviceCommand>
+public class AddDeviceCommandHandler : IRequestHandler<AddDeviceCommand, DeviceVM>
 {
     private readonly IDataStore _dataStore;
 
@@ -15,7 +17,7 @@ public class AddDeviceCommandHandler : IRequestHandler<AddDeviceCommand>
         _dataStore = dataStore;
     }
     
-    public async Task Handle(AddDeviceCommand request, CancellationToken cancellationToken)
+    public async Task<DeviceVM> Handle(AddDeviceCommand request, CancellationToken cancellationToken)
     {
         var oldDevice = await _dataStore.Devices
             .FirstOrDefaultAsync(x => x.DeviceUid == request.DeviceUid, cancellationToken);
@@ -38,5 +40,7 @@ public class AddDeviceCommandHandler : IRequestHandler<AddDeviceCommand>
         user.Devices.Add(newDevice);
 
         await _dataStore.SaveChangesAsync(cancellationToken);
+
+        return newDevice.Map();
     }
 }
