@@ -23,7 +23,7 @@ public class GetDevicesQueryCommandHandler : IRequestHandler<GetDevicesQueryComm
 
         return new DeviceVmList()
         {
-            Devices = devices.ToVm()
+            Devices = devices.Map()
         };
     }
 }

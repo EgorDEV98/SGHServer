@@ -1,8 +1,9 @@
 ﻿using MediatR;
+using SGHServer.Application.Response.VMs;
 
 namespace SGHServer.Application.Repository.DeviceRepository.Command.AddDeviceCommand;
 
-public class AddDeviceCommand : IRequest
+public class AddDeviceCommand : IRequest<DeviceVM>
 {
     /// <summary>
     /// Id пользователя

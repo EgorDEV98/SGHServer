@@ -14,7 +14,7 @@ namespace SGHServer.API.Controllers;
 public class DeviceController : BaseController
 {
     [HttpPost, Authorize]
-    public async Task Add([FromBody] CreateDeviceModel createDeviceModel)
+    public async Task<DeviceVM> Add([FromBody] CreateDeviceModel createDeviceModel)
     {
         var userId = User.Claims.First(x => x.Type == ClaimTypes.Sid).Value;
         int.TryParse(userId, out var intId);
@@ -24,9 +24,9 @@ public class DeviceController : BaseController
             Id = intId,
             DeviceUid = createDeviceModel.DeviceUid
         };
-        await Mediator.Send(command);
+        var device = await Mediator.Send(command);
 
-        Ok();
+        return device;
     }
 
     [HttpPatch, Authorize]
