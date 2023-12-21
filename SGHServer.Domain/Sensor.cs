@@ -11,9 +11,12 @@ public class Sensor : BaseEntity
     /// Имя датчика
     /// </summary>
     public string Name { get; set; }
-    
+
     /// <summary>
-    /// Время последнего обновления
+    /// Значения с датчика
     /// </summary>
-    public DateTime LastTimeUpdate { get; set; }
+    public ICollection<SensorValue> Values { get; set; }
 }
+
+
+
