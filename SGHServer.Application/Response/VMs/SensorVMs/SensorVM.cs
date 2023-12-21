@@ -1,6 +1,6 @@
-﻿namespace SGHServer.Domain;
+﻿namespace SGHServer.Application.Response.VMs.SensorVM;
 
-public class Sensor : BaseEntity
+public class SensorVM
 {
     /// <summary>
     /// GUID датчика
@@ -16,9 +16,14 @@ public class Sensor : BaseEntity
     /// Единицы измерения
     /// </summary>
     public string PostFix { get; set; }
-
+    
     /// <summary>
-    /// Значения с датчика
+    /// Последний показатель
     /// </summary>
-    public ICollection<SensorValue> Values { get; set; }
+    public double Value { get; set; }
+    
+    /// <summary>
+    /// Дата последних измерений
+    /// </summary>
+    public DateTime LastUpdate { get; set; }
 }
