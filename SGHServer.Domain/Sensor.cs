@@ -17,6 +17,3 @@ public class Sensor : BaseEntity
     /// </summary>
     public ICollection<SensorValue> Values { get; set; }
 }
-
-
-
