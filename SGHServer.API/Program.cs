@@ -77,24 +77,31 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
 });
 
 
-if (app.Environment.IsDevelopment())
+app.UseCors(x =>
 {
-    app.UseCors(x =>
-    {
-        x.AllowAnyOrigin()
-            .AllowAnyHeader()
-            .AllowAnyMethod();
-    });
-}
-else
-{
-    app.UseCors(x =>
-    {
-        x.WithOrigins("http://192.168.3.10:3000")
-            .AllowAnyHeader()
-            .AllowAnyMethod();
-    });
-}
+    x.AllowAnyOrigin()
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+});
+
+// if (app.Environment.IsDevelopment())
+// {
+//     app.UseCors(x =>
+//     {
+//         x.AllowAnyOrigin()
+//             .AllowAnyHeader()
+//             .AllowAnyMethod();
+//     });
+// }
+// else
+// {
+//     app.UseCors(x =>
+//     {
+//         x.WithOrigins("http://192.168.3.10:3000")
+//             .AllowAnyHeader()
+//             .AllowAnyMethod();
+//     });
+// }
 
 app.UseGlobalExtentionMiddleware();
 app.UseHttpsRedirection();

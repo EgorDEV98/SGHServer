@@ -2,6 +2,8 @@
 
 services:
   api:
+    environment: 
+      - ASPNETCORE_ENVIRONMENT=Production
     image: kain1029/sghserver:latest
     build:
       context: .
@@ -9,19 +11,24 @@ services:
     container_name: "API"
     ports:
       - "5000:80"
-  apiTest:
-    image: kain1029/sghserver:test
-    build:
-      context: .
-      dockerfile: SGHServer.API/Dockerfile
-    container_name: "API"
+  client:
+    container_name: "CLIENT"
+    image: kain1029/sghclient:latest
     ports:
-      - "5001:80"
+      - "5001:3000"
+  proxy:
+    image: "nginx:mainline"
+    container_name: "NGINX"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
   db:
+    container_name: "DATASTORE"
     image: postgres:latest
     environment:
       POSTGRES_DB: "SGHDatastore"
-      POSTGRES_USER: "Server"
-      POSTGRES_PASSWORD: "123"
+      POSTGRES_USER: "SGH"
+      POSTGRES_PASSWORD: "SGHDatastore"
     ports:
       - "5432:5432"
