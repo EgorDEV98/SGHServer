@@ -11,10 +11,12 @@ namespace SGHServer.Application.Repository.DeviceRepository.Command.AddDeviceCom
 public class AddDeviceCommandHandler : IRequestHandler<AddDeviceCommand, DeviceVM>
 {
     private readonly IDataStore _dataStore;
+    private readonly IRabbitMQService _rabbitMqService;
 
-    public AddDeviceCommandHandler(IDataStore dataStore)
+    public AddDeviceCommandHandler(IDataStore dataStore, IRabbitMQService rabbitMqService)
     {
         _dataStore = dataStore;
+        _rabbitMqService = rabbitMqService;
     }
     
     public async Task<DeviceVM> Handle(AddDeviceCommand request, CancellationToken cancellationToken)
@@ -26,6 +28,8 @@ public class AddDeviceCommandHandler : IRequestHandler<AddDeviceCommand, DeviceV
         {
             throw new HasBeenException("Данное устройство уже было добавлено ранее");
         }
+
+        await _rabbitMqService.Register(request.DeviceUid);
 
         var user = await _dataStore.Users
             .Include(x => x.Devices)
