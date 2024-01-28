@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UBM8OvE4ZsP3mSmaMtxLmOxBR2eigS8FPt8bh6L1Pk1/mh2H7EKi359tTNMUxHYGwIpXpJycpw9sAz6DI/eFWA==",
+  "dgSpecHash": "lqU9D/twcHBeJotg+Jb+Rf7vlmp86aoulkleY3pVQGt/iBedefdZakUN1yoAuaUswwxelRM+dFj+U/GPpWtcBg==",
   "success": true,
   "projectFilePath": "D:\\SGHServer\\SGHServer.Persistence\\SGHServer.Persistence.csproj",
   "expectedPackageFiles": [
@@ -29,9 +29,9 @@
     "C:\\Users\\egors\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\egors\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\egors\\.nuget\\packages\\system.threading.channels\\8.0.0\\system.threading.channels.8.0.0.nupkg.sha512",
-    "C:\\Users\\egors\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\egors\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\egors\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
+    "C:\\Users\\egors\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\egors\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\egors\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512"
   ],
   "logs": [
     {
