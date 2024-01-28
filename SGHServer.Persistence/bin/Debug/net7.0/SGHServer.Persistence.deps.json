@@ -34,6 +34,14 @@
           }
         }
       },
+      "M2Mqtt/4.3.0": {
+        "runtime": {
+          "lib/net45/M2Mqtt.Net.dll": {
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.3.0.0"
+          }
+        }
+      },
       "MediatR/12.2.0": {
         "dependencies": {
           "MediatR.Contracts": "2.0.1",
@@ -214,14 +222,46 @@
           }
         }
       },
+      "RabbitMQ.Client/7.0.0-alpha.2": {
+        "dependencies": {
+          "System.IO.Pipelines": "8.0.0",
+          "System.Memory": "4.5.5",
+          "System.Threading.Channels": "8.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.0"
+          }
+        }
+      },
+      "System.IO.Pipelines/8.0.0": {
+        "runtime": {
+          "lib/net7.0/System.IO.Pipelines.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
+      "System.Memory/4.5.5": {},
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "System.Threading.Channels/8.0.0": {
+        "runtime": {
+          "lib/net7.0/System.Threading.Channels.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
       "SGHServer.Application/1.0.0": {
         "dependencies": {
           "FluentValidation": "11.8.1",
           "FluentValidation.DependencyInjectionExtensions": "11.8.1",
+          "M2Mqtt": "4.3.0",
           "MediatR": "12.2.0",
           "Microsoft.EntityFrameworkCore": "7.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0",
+          "RabbitMQ.Client": "7.0.0-alpha.2",
           "SGHServer.Domain": "1.0.0"
         },
         "runtime": {
@@ -254,6 +294,13 @@
       "sha512": "sha512-Yyme2uCHnf+HawEHUEj7PguR54TPkx1HJT93/POvHT4xONvUrNfLg3Zt2NUAmIbhMjplb6TPLN8DD9AA7B/3QA==",
       "path": "fluentvalidation.dependencyinjectionextensions/11.8.1",
       "hashPath": "fluentvalidation.dependencyinjectionextensions.11.8.1.nupkg.sha512"
+    },
+    "M2Mqtt/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2A1uM20uxuovQKPA0dkZUqD9gUpIMaX7KxdLiVM7IEXdPRL709hGuudHnvlDxm2/6b2LcOjshrYGVG9vdpipag==",
+      "path": "m2mqtt/4.3.0",
+      "hashPath": "m2mqtt.4.3.0.nupkg.sha512"
     },
     "MediatR/12.2.0": {
       "type": "package",
@@ -374,12 +421,40 @@
       "path": "npgsql.entityframeworkcore.postgresql/7.0.0",
       "hashPath": "npgsql.entityframeworkcore.postgresql.7.0.0.nupkg.sha512"
     },
+    "RabbitMQ.Client/7.0.0-alpha.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-u+WMgy24KHun56/nctiq8bIy3PwT24JmQ+ON1LAg3Qx06mYvhlhiAItE0kkDAv1cEKt/a44mTwC6VD6WXZL4wg==",
+      "path": "rabbitmq.client/7.0.0-alpha.2",
+      "hashPath": "rabbitmq.client.7.0.0-alpha.2.nupkg.sha512"
+    },
+    "System.IO.Pipelines/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FHNOatmUq0sqJOkTx+UF/9YK1f180cnW5FVqnQMvYUN0elp6wFzbtPSiqbo1/ru8ICp43JM1i7kKkk6GsNGHlA==",
+      "path": "system.io.pipelines/8.0.0",
+      "hashPath": "system.io.pipelines.8.0.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
+      "path": "system.memory/4.5.5",
+      "hashPath": "system.memory.4.5.5.nupkg.sha512"
+    },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "System.Threading.Channels/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CMaFr7v+57RW7uZfZkPExsPB6ljwzhjACWW1gfU35Y56rk72B/Wu+sTqxVmGSk4SFUlPc3cjeKND0zktziyjBA==",
+      "path": "system.threading.channels/8.0.0",
+      "hashPath": "system.threading.channels.8.0.0.nupkg.sha512"
     },
     "SGHServer.Application/1.0.0": {
       "type": "project",

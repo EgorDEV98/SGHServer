@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddPersistence(builder.Configuration);
-builder.Services.AddApplication();
+builder.Services.AddApplication(builder.Configuration);
 builder.Services.AddProtection();
 
 builder.Services.AddEndpointsApiExplorer();
@@ -83,25 +83,6 @@ app.UseCors(x =>
         .AllowAnyHeader()
         .AllowAnyMethod();
 });
-
-// if (app.Environment.IsDevelopment())
-// {
-//     app.UseCors(x =>
-//     {
-//         x.AllowAnyOrigin()
-//             .AllowAnyHeader()
-//             .AllowAnyMethod();
-//     });
-// }
-// else
-// {
-//     app.UseCors(x =>
-//     {
-//         x.WithOrigins("http://192.168.3.10:3000")
-//             .AllowAnyHeader()
-//             .AllowAnyMethod();
-//     });
-// }
 
 app.UseGlobalExtentionMiddleware();
 app.UseHttpsRedirection();

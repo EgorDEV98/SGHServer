@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "zKJsRbaHFQVbFtC1Yy/8BAB+9Z797pADGjxK1oDwVxkyAGmDxvI7evEGHVDONA8aJBgg3W8vCxzszk/lTRXFVw==",
+  "dgSpecHash": "FIcLDaftBlA4xx7/RImmsVoCSXj6MGNRPL+2dbPxglMek4bsvi4ipZTZ9sTKi7D0Sk1y8WsvqsXnCjF08jPlRw==",
   "success": true,
   "projectFilePath": "D:\\SGHServer\\SGHServer.Domain\\SGHServer.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\egors\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\egors\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\egors\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
+    "C:\\Users\\egors\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\egors\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\egors\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512"
   ],
   "logs": []
 }
